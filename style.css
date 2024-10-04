@@ -1,15 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #2e2e2e;
+    color: #ffffff;
     text-align: center;
+    font-size: 32px;
 }
 
 h1 {
     margin-top: 20px;
 }
 
-.dice-selector, .dice-number {
+.dice-input {
     margin: 20px;
 }
 
@@ -17,20 +18,21 @@ label {
     font-weight: bold;
 }
 
-#dice-type, #dice-number {
-    font-size: 16px;
+#dice-pool {
+    font-size: 24px;
     padding: 5px;
+    width: 80%;
 }
 
 #roll-button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 24px;
     cursor: pointer;
 }
 
 #result {
     margin: 20px;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 #history {
@@ -40,6 +42,7 @@ label {
 #history-list {
     list-style-type: none;
     padding: 0;
+    font-size: 28px;
 }
 
 #history-list li {
