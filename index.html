@@ -10,6 +10,7 @@
 
     <div id="dice-pool">
         <h2>Build Your Dice Pool</h2>
+        <!-- Adding six sets of dropdowns for specifying dice -->
         <div class="dice-selector">
             <select class="dice-count">
                 <option value="0" selected>0</option>
@@ -31,7 +32,8 @@
             </select>
         </div>
 
-        <!-- Repeat the above div for each set of dropdowns, six total -->
+        <!-- Duplicate the above div five more times to make a total of six -->
+        <!-- This makes a total of six sets of dropdowns -->
         <div class="dice-selector">
             <select class="dice-count">
                 <option value="0" selected>0</option>
@@ -52,24 +54,81 @@
                 <option value="100">D100</option>
             </select>
         </div>
-        <!-- Add four more sets of these dropdowns (total six sets) -->
-    </div>
 
-    <button id="roll-button">Roll Dice</button>
-    <button id="save-pool-button">Save Current Pool</button>
+        <!-- Repeat four more times for a total of six dropdown sets -->
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D4</option>
+                <option value="6" selected>D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+                <option value="100">D100</option>
+            </select>
+        </div>
 
-    <div class="saved-pools">
-        <label for="saved-pool">Select Saved Pool:</label>
-        <select id="saved-pool">
-            <option value="" selected>--Select a Saved Pool--</option>
-        </select>
-    </div>
+        <!-- Adding four more dropdown sets for the remaining -->
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D4</option>
+                <option value="6" selected>D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+                <option value="100">D100</option>
+            </select>
+        </div>
 
-    <div id="result"></div>
-    <div id="history">
-        <h2>Roll History</h2>
-        <ul id="history-list"></ul>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D4</option>
+                <option value="6" selected>D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+                <option value="100">D100</option>
+            </select>
+        </div>
+
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D
