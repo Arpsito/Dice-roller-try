@@ -14,19 +14,25 @@ function rollDice() {
         const count = parseInt(selector.querySelector('.dice-count').value);
         const sides = parseInt(selector.querySelector('.dice-type').value);
 
-        for (let i = 0; i < count; i++) {
-            let roll = Math.floor(Math.random() * sides) + 1;
-            results.push(`D${sides}: ${roll}`);
+        if (count > 0) {
+            for (let i = 0; i < count; i++) {
+                let roll = Math.floor(Math.random() * sides) + 1;
+                results.push(`D${sides}: ${roll}`);
+            }
         }
     });
 
     // Display current roll
-    resultsDiv.innerHTML = 'You rolled: <br>' + results.join('<br>');
+    if (results.length > 0) {
+        resultsDiv.innerHTML = 'You rolled: <br>' + results.join('<br>');
 
-    // Add to history
-    let historyItem = document.createElement('li');
-    historyItem.innerHTML = `Rolled: ${results.join('<br>')}`;
-    historyList.prepend(historyItem);
+        // Add to history
+        let historyItem = document.createElement('li');
+        historyItem.innerHTML = `Rolled: ${results.join('<br>')}`;
+        historyList.prepend(historyItem);
+    } else {
+        resultsDiv.innerHTML = 'No dice selected.';
+    }
 }
 
 function saveDicePool() {
@@ -49,6 +55,8 @@ function saveDicePool() {
             savedPool.textContent = poolName;
             document.getElementById('saved-pool').appendChild(savedPool);
         }
+    } else {
+        alert('No dice selected to save.');
     }
 }
 
