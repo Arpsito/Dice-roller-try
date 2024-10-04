@@ -7,11 +7,64 @@
 </head>
 <body>
     <h1>Dice Roller App</h1>
-    <div class="dice-input">
-        <label for="dice-pool">Enter Dice Pool (e.g., 3D100, 1D20, 1D6, 1D4):</label>
-        <input type="text" id="dice-pool" placeholder="e.g., 3D100, 1D20, 1D6, 1D4">
+
+    <div id="dice-pool">
+        <h2>Build Your Dice Pool</h2>
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D4</option>
+                <option value="6" selected>D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+                <option value="100">D100</option>
+            </select>
+        </div>
+
+        <!-- Repeat the above div for each set of dropdowns, six total -->
+        <div class="dice-selector">
+            <select class="dice-count">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <select class="dice-type">
+                <option value="4">D4</option>
+                <option value="6" selected>D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+                <option value="100">D100</option>
+            </select>
+        </div>
+        <!-- Add four more sets of these dropdowns (total six sets) -->
     </div>
+
     <button id="roll-button">Roll Dice</button>
+    <button id="save-pool-button">Save Current Pool</button>
+
+    <div class="saved-pools">
+        <label for="saved-pool">Select Saved Pool:</label>
+        <select id="saved-pool">
+            <option value="" selected>--Select a Saved Pool--</option>
+        </select>
+    </div>
+
     <div id="result"></div>
     <div id="history">
         <h2>Roll History</h2>
