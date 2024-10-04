@@ -10,22 +10,38 @@ h1 {
     margin-top: 20px;
 }
 
-.dice-selector {
-    margin: 10px;
+.dice-selection {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
-label {
+.dice {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.dice-count, .dice-type {
-    font-size: 24px;
-    padding: 5px;
+.dice:hover {
+    background-color: #f0ad4e;
 }
 
-#roll-button, #save-pool-button {
-    padding: 15px 30px;
+#selected-dice {
+    margin: 20px;
     font-size: 24px;
+}
+
+#roll-button, #save-pool-button, #roll-saved-pool-button {
+    padding: 20px 40px;
+    font-size: 28px;
     cursor: pointer;
     margin: 10px;
 }
@@ -47,11 +63,4 @@ label {
 
 #history-list li {
     margin-bottom: 5px;
-}
-
-#roll-button, #save-pool-button, #roll-saved-pool-button {
-    padding: 20px 40px;
-    font-size: 28px;
-    cursor: pointer;
-    margin: 10px;
 }
