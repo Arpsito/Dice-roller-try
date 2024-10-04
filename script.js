@@ -13,7 +13,14 @@ function rollDice() {
     }
 
     // Display current roll
+    // Display current roll with dice faces
+if (diceType === 6) {
+    const diceUnicode = ['\u2680', '\u2681', '\u2682', '\u2683', '\u2684', '\u2685'];
+    let diceFaces = results.map(num => diceUnicode[num - 1]).join(' ');
+    resultsDiv.innerHTML = 'You rolled: ' + diceFaces;
+} else {
     resultsDiv.innerHTML = 'You rolled: ' + results.join(', ');
+}
 
     // Add to history
     let historyItem = document.createElement('li');
