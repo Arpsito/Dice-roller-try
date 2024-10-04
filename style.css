@@ -48,3 +48,10 @@ label {
 #history-list li {
     margin-bottom: 5px;
 }
+
+#roll-button, #save-pool-button, #roll-saved-pool-button {
+    padding: 20px 40px;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 10px;
+}
