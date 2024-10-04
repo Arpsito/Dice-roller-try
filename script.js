@@ -1,6 +1,7 @@
 document.getElementById('roll-button').addEventListener('click', rollDice);
 document.getElementById('save-pool-button').addEventListener('click', saveDicePool);
 document.getElementById('saved-pool').addEventListener('change', loadSavedPool);
+document.getElementById('roll-saved-pool-button').addEventListener('click', rollSavedPool);
 
 function rollDice() {
     const diceSelectors = document.querySelectorAll('.dice-selector');
@@ -72,5 +73,35 @@ function loadSavedPool() {
                 matchingSelector.querySelector('.dice-count').value = count;
             }
         });
+    }
+}
+
+function rollSavedPool() {
+    const savedPoolValue = document.getElementById('saved-pool').value;
+    if (savedPoolValue) {
+        const resultsDiv = document.getElementById('result');
+        const historyList = document.getElementById('history-list');
+        let results = [];
+
+        // Parse saved pool and roll dice
+        const poolItems = savedPoolValue.split(', ');
+        poolItems.forEach(item => {
+            const [count, sides] = item.split('D').map(Number);
+
+            for (let i = 0; i < count; i++) {
+                let roll = Math.floor(Math.random() * sides) + 1;
+                results.push(`D${sides}: ${roll}`);
+            }
+        });
+
+        // Display saved pool roll
+        resultsDiv.innerHTML = 'You rolled: <br>' + results.join('<br>');
+
+        // Add to history
+        let historyItem = document.createElement('li');
+        historyItem.innerHTML = `Rolled saved pool: ${savedPoolValue} <br> ${results.join('<br>')}`;
+        historyList.prepend(historyItem);
+    } else {
+        alert('Please select a saved pool to roll.');
     }
 }
