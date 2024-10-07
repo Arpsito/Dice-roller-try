@@ -36,25 +36,4 @@ function rollDice() {
 
     // Display current roll
     if (results.length > 0) {
-        resultsDiv.innerHTML = 'You rolled: <br>' + results.join('<br>');
-
-        // Add to history
-        let historyItem = document.createElement('li');
-        historyItem.innerHTML = `Rolled: ${results.join('<br>')}`;
-        historyList.prepend(historyItem);
-    } else {
-        resultsDiv.innerHTML = 'No dice selected.';
-    }
-}
-
-function saveDicePool() {
-    // Implementation remains the same as before for saving dice pools.
-}
-
-function loadSavedPool() {
-    // Implementation remains the same for loading saved pools.
-}
-
-function rollSavedPool() {
-    // Implementation remains the same for rolling saved pools.
-}
+        resultsDiv.innerHTML = 'You rolled: <
