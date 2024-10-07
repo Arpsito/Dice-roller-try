@@ -13,6 +13,7 @@ h1 {
 .dice-selection {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 20px;
 }
 
@@ -39,11 +40,19 @@ h1 {
     font-size: 24px;
 }
 
-#roll-button, #save-pool-button, #roll-saved-pool-button {
+button {
     padding: 20px 40px;
     font-size: 28px;
     cursor: pointer;
     margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 #result {
