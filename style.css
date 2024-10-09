@@ -1,15 +1,20 @@
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #2e2e2e;
     color: #ffffff;
     text-align: center;
     font-size: 32px;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header styling */
 h1 {
     margin-top: 20px;
 }
 
+/* Dice selection grid */
 .dice-selection {
     display: flex;
     justify-content: center;
@@ -17,6 +22,7 @@ h1 {
     margin: 20px;
 }
 
+/* Individual dice button styling */
 .dice {
     width: 80px;
     height: 80px;
@@ -29,17 +35,21 @@ h1 {
     margin: 10px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 24px;
 }
 
+/* Hover effect for dice */
 .dice:hover {
     background-color: #f0ad4e;
 }
 
+/* Selected dice display */
 #selected-dice {
     margin: 20px;
     font-size: 24px;
 }
 
+/* Styling for all buttons */
 button {
     padding: 20px 40px;
     font-size: 28px;
@@ -51,15 +61,18 @@ button {
     border-radius: 5px;
 }
 
+/* Button hover effect */
 button:hover {
     background-color: #45a049;
 }
 
+/* Result and history styling */
 #result {
     margin: 20px;
     font-size: 36px;
 }
 
+/* History styling */
 #history {
     margin: 20px;
 }
@@ -70,6 +83,7 @@ button:hover {
     font-size: 28px;
 }
 
+/* Each history entry */
 #history-list li {
     margin-bottom: 5px;
 }
